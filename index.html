@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-slate-100 font-sans"
+    style="background-image: url('https://w0.peakpx.com/wallpaper/771/437/HD-wallpaper-cloudy-weather-rain-clouds-weather.jpg'); background-size: cover;">
+    <div class="min-h-screen py-6">
+        <div class="min-h-14 py-2 w-[50%] mx-auto flex justify-center rounded-full  bg-gray-100/20  items-center ">
+            <input type="text" placeholder="Enter City Name"
+                class="w-[80%] text-xl font-semibold text-white px-6 py-2 outline-none">
+            <i class="fa-solid fa-magnifying-glass fa-lg" style="color: white;"></i>
+        </div>
+
+        <div class="my-2 flex flex-col md:flex-row items-center justify-between px-20">
+            <div class="h-28 w-44   flex flex-col justify-between">
+                <h1 class="text-4xl font-semibold text-white text-center">Thunder</h1>
+                <div class="text-center">
+                    <h2 class="text-4xl font-semibold text-white">16°C</h2>
+                    <p class="text-gray-200">Sunday | 17 Feb 2026</p>
+                </div>
+            </div>
+            <div class="min-h-44 w-44  flex justify-center items-center">
+                <i class="fa-solid fa-cloud fa-2xl text-gray-200" style="font-size: 100px;"></i>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-[0.25fr_2.75fr_1fr] px-25 gap-2.5 md:grid-rows-[400px]
+        ">
+
+            <!-- div 1 -->
+            <div class="rounded-full bg-gray-50/15 py-4 flex md:flex-col  items-center space-y-8 justify-center">
+                <!-- profile -->
+                <div>
+                    <img class="h-10 w-10 rounded-full"
+                        src="https://st3.depositphotos.com/13369764/18749/i/450/depositphotos_187498832-stock-photo-portrait-profile-young-woman-dark.jpg"
+                        alt="">
+                </div>
+
+                <!-- cloud -->
+                <div class="flex flex-col  items-center space-y-5">
+                    <i class="fa-solid fa-cloud fa-xl text-gray-200"></i>
+                    <p class="text-gray-200 text-sm">Weather</p>
+                </div>
+
+                <!-- explore -->
+                <div class="flex flex-col items-center space-y-3">
+                    <i class="fa-solid fa-compass fa-xl" style="color: rgb(207, 209, 212);"></i>
+                    <p class="text-gray-300 text-sm">Explore</p>
+                </div>
+
+                <!--  -->
+                <div class="flex flex-col items-center space-y-3">
+                    <i class="fa-solid fa-location-dot fa-xl" style="color: rgb(207, 209, 212);"></i>
+                    <p class="text-gray-300 text-sm">Cities</p>
+                </div>
+                <div class="flex flex-col items-center space-y-3">
+                    <i class="fa-solid fa-gear fa-xl" style="color: rgb(207, 209, 212);"></i>
+                    <p class="text-gray-300 text-sm">Settings</p>
+                </div>
+
+            </div>
+
+            <!-- Div 2 -->
+            <div class="rounded-4xl space-y-4">
+
+                <div class="h-[48%] bg-gray-50/15 rounded-4xl flex flex-col">
+
+                    <div class="text-gray-200 py-3 px-6">
+                        <p>Activities in your city</p>
+                    </div>
+
+                    <div class="flex justify-evenly items-start py-5">
+
+                        <div class="h-28 w-44">
+                            <img class="bg-cover h-28 w-44 rounded-2xl"
+                                src="https://thegypsychiring.com/wp-content/uploads/2021/11/Adventure-activities-in-Bir-Billing-Himachal-Pradesh-India-1.webp"
+                                alt="">
+                        </div>
+                        <div class="h-28 w-44 ">
+                            <img class="bg-cover h-28 w-44 rounded-2xl"
+                                src="https://visitbath.co.uk/imageresizer/?image=%2Fdbimgs%2FVB%20Gallery%20-%20Things%20To%20Do%20-%20Sports%20%26%20Active%20-%20Original%20Wild%20%282%29.jpg&action=FeaturedItemsGalleryProElite3x2"
+                                alt="">
+                        </div>
+                        <div class="h-28 w-44">
+                            <img class="bg-cover h-28 w-44 rounded-2xl"
+                                src="https://www.oyorooms.com/travel-guide/wp-content/uploads/2021/07/Delhi_Image1-2.jpg"
+                                alt="">
+                        </div>
+                        <div class="h-28 w-44">
+                            <img class="bg-cover h-28 w-44 rounded-2xl"
+                                src="https://www.littlemissottawa.com/wp-content/uploads/2023/03/Quebec-City-2-1440x977.jpg"
+                                alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="h-[48%] bg-gray-50/15 rounded-4xl">
+                    <div class="relative z-10 p-6">
+
+                        <!-- Header -->
+                        <div class="flex items-center gap-2 text-sm opacity-80 mb-6">
+                            <span>🕒</span>
+                            <span class="text-gray-200">24-hour forecast</span>
+                        </div>
+
+                        <!-- Temperature Numbers -->
+                        <div class="flex justify-between text-gray-200 px-4 text-sm font-medium">
+                            <div>26°</div>
+                            <div>25°</div>
+                            <div>22°</div>
+                            <div>18°</div>
+                            <div>20°</div>
+                            <div>22°</div>
+                            <div>16°</div>
+                        </div>
+
+                        <!-- SVG Curve Line -->
+                        <svg class="absolute left-0 top-27.5 w-full h-24 pointer-events-none">
+                            <path d="M0 40 
+                             C120 30, 240 60, 360 50 
+                             S600 35, 720 55 
+                             S840 45, 900 60" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <!-- Weather Icons + Time -->
+                        <div class="flex justify-between px-4 mt-16 text-xs text-white/80">
+                            <div class="flex flex-col items-center gap-1">
+                                🌤
+                                <span>Now</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                🌙
+                                <span>23:00</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                🌧
+                                <span>00:00</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                🌧
+                                <span>1:00</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                🌧
+                                <span>4:00</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                🌧
+                                <span>6:00</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                🌧
+                                <span>8:00</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- div 3 -->
+            <div class="rounded-4xl bg-gray-50/15 overflow-hidden">
+
+                <!-- Day Wise weather report -->
+                <div class="flex text-gray-300  mx-6 justify-center">
+
+                    <!--  -->
+                    <div class="px-3 py-6">
+                        <i class="fa-solid fa-cloud fa-xl text-gray-200"></i>
+                        <p>SUN</p>
+                    </div>
+
+                    <!--  -->
+                    <div class="px-3 py-6">
+                        <i class="fa-solid fa-cloud fa-xl text-gray-200"></i>
+                        <p>MON</p>
+                    </div>
+                    <!--  -->
+                    <div class="px-3 py-6">
+                        <i class="fa-solid fa-cloud fa-xl text-gray-200"></i>
+                        <p>TUE</p>
+                    </div>
+                    <!--  -->
+                    <div class="px-3 py-6">
+                        <i class="fa-solid fa-cloud fa-xl text-gray-200"></i>
+                        <p>WED</p>
+                    </div>
+                    <!--  -->
+                    <div class="px-3 py-6">
+                        <i class="fa-solid fa-cloud fa-xl text-gray-200"></i>
+                        <p>THU</p>
+                    </div>
+                    <!--  -->
+                    <div class="px-3 py-6">
+                        <i class="fa-solid fa-cloud fa-xl text-gray-200"></i>
+                        <p>FRI</p>
+                    </div>
+                    <!--  -->
+                    <div class="px-3 py-6">
+                        <i class="fa-solid fa-cloud fa-xl text-gray-200"></i>
+                        <p>SAT</p>
+                    </div>
+
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="flex justify-center">
+
+                    </div>
+
+                </div>
+
+                <!-- XXXXXXXXXXXX  Day Wise weather report -->
+
+                <div class="text-gray-200">
+                    <div>
+                       
+                    </div>
+
+                    <div class="flex flex-col space-y-3 my-4 items-center">
+
+                        <h2 class="text-xl font-semibold">Air Conditons</h2>
+                        <div class="flex ">
+                            <div>
+                                <i class="fa-solid fa-temperature-arrow-down fa-xl"></i>
+                            </div>
+                            <div>
+                                 <p>Real Feel</p>
+                                 <p>16°C</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <i class="fa-solid fa-temperature-arrow-down fa-xl"></i>
+                            </div>
+                            <div>
+                                <p>Real Feel</p>
+                                <p>16°C</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <i class="fa-solid fa-temperature-arrow-down fa-xl"></i>
+                            </div>
+                            <div>
+                                <p>Real Feel</p>
+                                <p>16°C</p>
+                            </div>
+                        </div>
+                    <div class="flex">
+                        <div>
+                            <i class="fa-solid fa-temperature-arrow-down fa-xl"></i>
+                        </div>
+                        <div>
+                            <p>Real Feel</p>
+                            <p>16°C</p>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
