@@ -15,11 +15,15 @@ const getData = async (city) => {
     let data = await response.json()
     let temperature = (data.main.temp).toFixed()
     temp.innerHTML = `${temperature}°C`;
-    if (data.weather[0].main == "clear") {
-        weatherIcon.innerHTML = `<i class="fa-solid fa-sun" style="color: rgb(255, 212, 59);"></i>`;
+    // if (data.weather[0].main == "clear") {
+    //     weatherIcon.innerHTML = `<i class="fa-solid fa-sun" style="color: rgb(255, 212, 59);"></i>`;
     
-    } 
+    // } 
+
+    console.log(data.weather[0].main);
 }
+
+console.log(getData());
 
 
 
