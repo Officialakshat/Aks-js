@@ -1,38 +1,20 @@
 let apiKey = "16f6dbcdfe4723e076394b1753066975";
-let cityInput = document.getElementById("city-name")
+let cityInput = document.getElementById("search-city");
 let searchBtn = document.getElementById("search-btn");
-// const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
-let temp = document.getElementById("temp-data");
-let weatherIcon = document.getElementById("weather-icon")
-let now = new Date();
-console.log(now);
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=delhi&appid=16f6dbcdfe4723e076394b1753066975`;
+let temp = document.getElementsByClassName("temp-data");
+let weatherIcon = document.getElementById("weather-icon");
+let cityName = document.getElementById("city-name");
 
+if(city )
 
-
-const getData = async (city) => {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${apiKey}`;
-    let response = await fetch(apiUrl);
-    let data = await response.json()
-    let temperature = (data.main.temp).toFixed()
-    temp.innerHTML = `${temperature}°C`;
-    // if (data.weather[0].main == "clear") {
-    //     weatherIcon.innerHTML = `<i class="fa-solid fa-sun" style="color: rgb(255, 212, 59);"></i>`;
-    
-    // } 
-
-    console.log(data.weather[0].main);
+async function weather() {
+  let res = await fetch(apiUrl);
+    let result = await res.json();
+    console.log(result);
+    return result   
 }
+document.createElement("div")
 
-console.log(getData());
-
-
-
-
-searchBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    getData(cityInput.value)
-})
-
-
-
-
+weather()
+function onSearch(city) {}

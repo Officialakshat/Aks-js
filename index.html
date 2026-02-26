@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="src/output.css">
     <style>
         .no-scrollbar::-webkit-scrollbar {
@@ -28,16 +28,17 @@
 
         <div
             class="h-14 py-2 w-[90%] md:w-[60%] lg:w-[40%] mx-auto flex justify-between rounded-full bg-gray-100/20 items-center px-6 border border-white/20 shadow-sm transition-all focus-within:bg-gray-100/30">
-            <input id="city-name" type="text" placeholder="Enter City Name" 
+            <input id="search-city" type="text" placeholder="Enter City Name" 
                 class="w-full text-lg sm:text-xl font-semibold text-white outline-none ">
             <button id="search-btn"><i class="fa-solid fa-magnifying-glass fa-lg cursor-pointer ml-2" style="color: white;"></i></button>
         </div>
 
         <div class="my-8 flex flex-col md:flex-row items-center justify-between px-4 lg:px-12 gap-6">
             <div class="flex flex-col justify-between text-center md:text-left">
+                <h3 id="city-name" class="text-xl font-semibold text-white tracking-wide"></h3>
                 <h1 class="text-4xl sm:text-5xl font-semibold text-white tracking-wide">Thunder</h1>
                 <div class="mt-2">
-                    <h2 id="temp-data" class="text-4xl sm:text-5xl font-semibold text-white">16°C</h2>
+                    <h2 class="temp-data text-4xl sm:text-5xl font-semibold text-white">16°C</h2>
                     <p class="text-gray-200 mt-1 text-sm sm:text-base">Sunday | 17 Feb 2026</p>
                 </div>
             </div>
@@ -182,7 +183,7 @@
                             <i class="fa-solid fa-temperature-half fa-lg mt-1 text-gray-200"></i>
                             <div>
                                 <p class="text-gray-300 text-sm">Real Feel</p>
-                                <p class="text-white font-semibold text-lg">16°C</p>
+                                <p class="temp-data text-white font-semibold text-lg">16°C</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
