@@ -6,15 +6,17 @@ let temp = document.getElementsByClassName("temp-data");
 let weatherIcon = document.getElementById("weather-icon");
 let cityName = document.getElementById("city-name");
 
-if(city )
 
-async function weather() {
-  let res = await fetch(apiUrl);
+  async function weather() {
+    let res = await fetch(apiUrl);
     let result = await res.json();
     console.log(result);
-    return result   
+    let temp = result.main.temp
+    return result;
+    
+    
 }
-document.createElement("div")
+
 
 weather()
 function onSearch(city) {}
