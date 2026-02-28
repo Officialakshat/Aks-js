@@ -28,9 +28,9 @@
 
         <div
             class="h-14 py-2 w-[90%] md:w-[60%] lg:w-[40%] mx-auto flex justify-between rounded-full bg-gray-100/20 items-center px-6 border border-white/20 shadow-sm transition-all focus-within:bg-gray-100/30">
-            <input id="search-city" type="text" placeholder="Enter City Name" 
+            <input id="city" type="text" placeholder="Enter City Name" required
                 class="w-full text-lg sm:text-xl font-semibold text-white outline-none ">
-            <button id="search-btn"><i class="fa-solid fa-magnifying-glass fa-lg cursor-pointer ml-2" style="color: white;"></i></button>
+            <button id="search-btn" onclick="onSearch()"><i class="fa-solid fa-magnifying-glass fa-lg cursor-pointer ml-2" style="color: white;"></i></button>
         </div>
 
         <div class="my-8 flex flex-col md:flex-row items-center justify-between px-4 lg:px-12 gap-6">
@@ -41,6 +41,10 @@
                     <h2 class="temp-data text-4xl sm:text-5xl font-semibold text-white">16°C</h2>
                     <p id="date" class="text-gray-200 mt-1 text-sm sm:text-base">Sunday | 17 Feb 2026</p>
                 </div>
+            </div>
+
+            <div>
+                <h1 class="sm:text-5xl font-semibold text-white tracking-wide">Delhi</h1>
             </div>
             <div id="weather-icon" class="flex justify-center items-center ">
             <i class="fa-solid fa-cloud text-gray-200/90 drop-shadow-lg" style="font-size: 100px;"></i>
