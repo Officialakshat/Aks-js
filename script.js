@@ -1,7 +1,7 @@
 let apiKey = "&appid=16f6dbcdfe4723e076394b1753066975";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 // city
-let city = document.getElementById("city").value;
+let cityInp = document.getElementById("city");
 // search
 let searchBtn = document.getElementById("search-btn");
 // temperature
@@ -15,23 +15,31 @@ let humidity = document.getElementById("humidity");
 // date
 let date = document.getElementById("date")
 
+let ShowCityName = document.querySelector(".cityName");
+
+let presentCity = ShowCityName.firstChild.nodeValue
+
+
+let city = "ludhiana";
+
+searchBtn.addEventListener("click", () => {
+  city = cityInp.value;
+  weather(city);
+})
+
 async function weather(city) {
   let res = await fetch(`${apiUrl}${city}${apiKey}`);
   let result = await res.json();
-  console.log(result);
-
-  
-  
-  function onSearch() {
-    console.log(city.value);
-  }
+  // console.log(result);
   // temperature
   let temp = result.main.temp;
   temperature.forEach((element) => {
     element.innerHTML = `${temp}°C`;
   });
 
-  // console.log(city);
+  presentCity.innerText = `${city}`
+
+  
 
   // wind
   let windData = result.wind.speed;
@@ -44,7 +52,9 @@ async function weather(city) {
   humidity.innerHTML = `${ humidityData}`
 }
 
-weather();
+weather(city);
+
+
 
 // console.log(temperature);
 
